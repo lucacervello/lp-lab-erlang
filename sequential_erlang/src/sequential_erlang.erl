@@ -33,7 +33,4 @@ basic_test_() ->
 anagram_simple_test() ->
     ?assert(is_palindrome("anna")).
 
-fail_test() ->
-    ?assert(false).
-
 -endif.
