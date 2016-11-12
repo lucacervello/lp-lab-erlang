@@ -1,0 +1,5 @@
+image: erlang:latest
+
+test:
+  script:
+    - for d in ./*/ ; do (cd "$d" && rebar3 eunit); done
