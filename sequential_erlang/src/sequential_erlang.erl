@@ -18,7 +18,6 @@ is_an_anagram(Str, Lst) ->
 -spec factors(integer()) -> list(integer()).
 factors(N) ->
     lists:filter(fun (X) -> N rem X == 0 andalso is_prime(X) end, lists:seq(1, N)).
-%[X || X <- lists:seq(1, N), is_prime(X)].
 
 -spec is_proper(integer()) -> boolean().
 is_proper(N) ->
@@ -44,9 +43,7 @@ is_prime(N) ->
 
 -include_lib("eunit/include/eunit.hrl").
 
-%%%%%%%%%%%%%%%%%%%%%
-%% Palindrome test %%
-%%%%%%%%%%%%%%%%%%%%%
+%% Palindrome test
 
 palindrome_simple_test() ->
     ?assert(is_palindrome("anna")).
@@ -60,9 +57,8 @@ palindrome_long_test() ->
 palindrome_another_long_test() ->
     ?assert(is_palindrome("Rise to vote, sir.")).
 
-%%%%%%%%%%%%%%%%%%
-%% Anagram test %%
-%%%%%%%%%%%%%%%%%%
+
+%% Anagram test
 
 no_matches_test() ->
   ?assertEqual(false, is_an_anagram("diaper", ["hello", "world", "zombies", "pants"])).
