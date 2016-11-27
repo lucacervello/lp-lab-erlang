@@ -65,4 +65,4 @@ simple_lookup_test() ->
     ?assertEqual([1], rpc(Pid, {lookup, a})).
 
 -endif.
-n
+
