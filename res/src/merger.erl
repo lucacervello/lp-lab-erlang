@@ -33,7 +33,7 @@ rpc(From, Q) ->
             Reply
     end.
 
-split(S, N) when N > length(S) ->
+split(S, N) when N >= length(S) ->
     [S];
 split(S, N) ->
     {S1, S2} = lists:split(N, S),
